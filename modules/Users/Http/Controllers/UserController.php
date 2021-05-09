@@ -19,7 +19,6 @@ class UserController extends Controller
         request()->validate([
             'name' => ['required', 'max:100'],
         ]);
-
         return Redirect::route('users')->with('success', 'User created.');
     }
 }
